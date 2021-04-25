@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monaco;
+}
+body {
+  background-color: rgb(153 199 184 / 30%);
+}
+
+h1 {
+  text-align: center;
+  font-family: cursive;
+  position: relative;
+  top: 100px;
+  font-size: 72px;
+}
+
+#main-nav a {
+  color: #f6f7f8;
+  background: #3b5552;
+  height: 64px;
+  font-family: lato;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.4s;
+  font-size: 18px;
+}
+#main-nav a:hover {
+  background: #3e6e6a;
+}
+
+#main-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+#main-nav li {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+#main-nav li:hover .submenu > li {
+  display: block;
+  flex-direction: column;
+  top: 0px;
+}
+
+.submenu li {
+  display: none;
+  position: absolute;
+  top: 0px;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+}
+
+.submenu li {
+  position: relative;
+}
+
+.submenu li:hover .submenu-2 li {
+  display: block;
+}
+
+.submenu-2 li {
+  display: none;
+}
+.submenu-2 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  width: 120px;
+}
+
+.arrow {
+  margin-left: 8px;
+  color: #eee;
+  font-size: 15px;
+}
+
+#main-nav .logo a {
+  font-size: 34px;
+  color: rgb(240, 239, 186);
+  cursor: default;
+}
+
+em {
+  text-decoration: none;
+  color: rgb(221, 221, 65);
+}
+#main-nav .logo a:hover {
+  background-color: #3b5552; 
+  cursor: default;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu li {
+  display: inline-block;
+  padding: 10px 45px;
+}
+.menu-button button {
+  width: 150px;
+  height: 50px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(78, 126, 107);
+  font-size: 18px;
+  border-radius: 10px;
+  /* box-shadow: 2px 2px #888888; */
+}
+.menu-button button:hover {
+  width: 150px;
+  height: 50px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(78, 126, 107);
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 2px 2px black;
+}
+button:hover {
+  cursor: pointer;
+}
+.menu-button #search {
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  width: 350px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: white;
+}
+.menu-button #search:hover {
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  width: 350px;
+  height: 50px;
+  box-shadow: 2px 2px black;
+  border-radius: 10px;
+  background-color: white;
+}
+input[id="search"]:focus {
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  width: 350px;
+  height: 50px;
+  outline: none;
+  border: 0.1em solid;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.top-pics {
+  width: 75%;
+  height: 400px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#heading {
+  position: relative;
+  display: flex;
+  margin-top: -489px;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: monospace;
+  width: 100%;
+  color: white;
+  background-color: rgba(32, 32, 32, 0.63);
+  border-radius: 0 0 10px 10px;
+}
+.slider {
+  width: 100%;
+  height: 570px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 180%;
+  display: flex;
+}
+.slides input {
+  display: none;
+}
+.slide {
+  width: 20%;
+  transition: 3s;
+}
+
+.slide img {
+  width: 100%;
+  height: 570px;
+}
+
+.nav-manual {
+  position: absolute;
+  width: 75%;
+  margin-top: -512px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid rgb(255, 255, 255);
+  background-color: #1b4713;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 1s;
+  box-shadow: 2px 1px black;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background-color: white;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+.imagescroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 110px;
+}
+.insta {
+  width: 650px;
+  height: 650px;
+}
+.img {
+  width: 100%;
+  height: 110%;
+}
+
+.imagescroll .insta img {
+  border: 2px rgb(24, 37, 24) solid;
+  border-radius: 10px;
+}
+.box {
+  width: 100%;
+  height: 30px;
+  border: 1px solid black;
+  background: rgba(130, 173, 164, 0.384);
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imagescroll .insta .box a {
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 30px;
+  color: black;
+  font-weight: bold;
+}
+.imagescroll .insta .box a:hover {
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 30px;
+  color: rgb(97, 96, 96);
+  font-weight: bold;
+}
+.text {
+  background-color: rgba(247, 247, 247, 0.397);
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 37px;
+  width: 650px;
+  position: absolute;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.text2 {
+  background-color: rgba(247, 247, 247, 0.397);
+  margin-top: 678px;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 37px;
+  width: 650px;
+  position: absolute;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+.container {
+  margin: auto;
+  margin-top: 110px;
+  border: 1px solid black;
+  width: 98vw;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background: rgba(140, 173, 166, 0.384);
+  border-radius: 5px;
+  border-color: green;
+}
+.item {
+  border: 1px solid black;
+  text-align: center;
+  height: 100px;
+  margin: 1px;
+  border-radius: 5px;
+}
+
+.container .item a {
+  display: inline-block;
+  margin-top: 42px;
+  text-decoration: none;
+  color: #1f534c;
+  font-size: 25px;
+}
+.container .item a:hover {
+  display: inline-block;
+  margin-top: 42px;
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+}
